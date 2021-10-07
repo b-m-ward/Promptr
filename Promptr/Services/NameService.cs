@@ -16,7 +16,7 @@ namespace Promptr.Core.Services
         {
             get
             {
-                return _GetFirstName().Replace("\r", "");
+                return GetFirstName().Replace("\r", "");
             }
         }
 
@@ -24,7 +24,7 @@ namespace Promptr.Core.Services
         {
             get
             {
-                return _GetLastName().Replace("\r", "");
+                return GetLastName().Replace("\r", "");
             }
         }
 
@@ -58,16 +58,16 @@ namespace Promptr.Core.Services
             }
         }
 
-        private string _GetFirstName()
+        public string GetFirstName()
         {
             Random rng = new Random();
-            return _firstNames[rng.Next(0, _firstNames.Count - 1)];
+            return _firstNames[rng.Next(0, _firstNames.Count - 1)].Replace("\r", "");
         }
 
-        private string _GetLastName()
+        public string GetLastName()
         {
             Random rng = new Random();
-            return _lastNames[rng.Next(0, _lastNames.Count - 1)];
+            return _lastNames[rng.Next(0, _lastNames.Count - 1)].Replace("\r", "");
         }
 
         /// <summary>
@@ -76,12 +76,20 @@ namespace Promptr.Core.Services
         /// <returns>List of return-separated last names.</returns>
         private List<string> _buildLastNames()
         {
-            List<string> output = new List<string>();
-            string fileContents = File.ReadAllText("../net5.0/Assets/LastNames.txt");
-            var split = fileContents.Split("\n");
-            output = split.ToList();
+            try
+            {
+                List<string> output = new List<string>();
+                string fileContents = File.ReadAllText("../net5.0/Assets/LastNames.txt");
+                var split = fileContents.Split("\n");
+                output = split.ToList();
 
-            return output;
+                return output;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
         }
     }
 }

@@ -10,8 +10,5 @@ namespace Promptr.Core.Services.Interfaces
     public interface IPromptGenerator
     {
         Character GenerateCharacter();
-        int RandomizeAge(int minAge, int maxAge);
-        string RandomizeFirstName();
-        string RandomizeLastName();
     }
 }

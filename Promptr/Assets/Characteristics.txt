@@ -1,0 +1,13 @@
+﻿Happy
+Optimistic
+Pessimistic
+Angry
+Spiteful
+Aloof
+On edge
+Liberal
+Conservative
+Loner
+Extravert
+Introvert
+Sociable

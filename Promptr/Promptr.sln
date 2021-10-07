@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Promptr.Core", "Promptr.Cor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Promptr.Tests", "..\Promptr.Tests\Promptr.Tests.csproj", "{4ADCB57D-E822-4CEC-89D6-6BB5523D840F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Promptr.Writer", "..\Promptr.Console\Promptr.Writer.csproj", "{804B8093-0884-4231-931C-6B26F231AA12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4ADCB57D-E822-4CEC-89D6-6BB5523D840F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4ADCB57D-E822-4CEC-89D6-6BB5523D840F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4ADCB57D-E822-4CEC-89D6-6BB5523D840F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{804B8093-0884-4231-931C-6B26F231AA12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{804B8093-0884-4231-931C-6B26F231AA12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{804B8093-0884-4231-931C-6B26F231AA12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{804B8093-0884-4231-931C-6B26F231AA12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

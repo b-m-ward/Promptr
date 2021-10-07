@@ -13,6 +13,7 @@ namespace Promptr
             ContainerBuilder builder = new ContainerBuilder();
             builder.RegisterType<NameService>().AsSelf();
             builder.RegisterType<CharacterService>().AsSelf();
+            builder.RegisterType<CharacteristicsService>().AsSelf();
 
 
             Container = builder.Build();

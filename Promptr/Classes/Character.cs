@@ -24,6 +24,18 @@ namespace Promptr.Core.Classes
         public int Age { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string Occupation { get; set; }
+        public IEnumerable<string> Characteristics { get; set; }
+
+        public string IntroduceCharacter()
+        {
+            StringBuilder builder = new StringBuilder();
+            builder.AppendLine($"{FirstName} {LastName} is {Age} years old and goes through life as a {Occupation}.");
+            builder.AppendLine($"   He or she is:");
+            foreach (var trait in Characteristics) builder.AppendLine($"    - {trait}");
+            return builder.ToString();
+
+        }
 
     }
 }

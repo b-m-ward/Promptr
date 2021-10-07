@@ -12,6 +12,12 @@
     <None Update="Assets\FirstNames.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Assets\Characteristics.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Occupations.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Assets\LastNames.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

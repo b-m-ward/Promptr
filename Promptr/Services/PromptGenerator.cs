@@ -10,19 +10,15 @@ namespace Promptr.Core.Services
 {
     class PromptGenerator : IPromptGenerator
     {
-        public PromptGenerator()
+        CharacterService _character;
+        public PromptGenerator(CharacterService character)
         {
-
+            _character = character;
         }
 
         public Character GenerateCharacter()
         {
-            return new Character()
-            {
-                Age = RandomizeAge(),
-                FirstName = RandomizeFirstName(),
-                LastName = RandomizeLastName()
-            };
+            return _character.BuildCharacter();
         }
 
         public Character GenerateCharacter(int age, string firstName, string lastName)
@@ -30,21 +26,5 @@ namespace Promptr.Core.Services
             return new Character(age, firstName, lastName);
         }
 
-        public int RandomizeAge(int minAge = 0, int maxAge = 100)
-        {
-            Random rng = new Random();
-            return rng.Next(minAge, maxAge);
-
-        }
-
-        public string RandomizeFirstName()
-        {
-            throw new NotImplementedException();
-        }
-
-        public string RandomizeLastName()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
